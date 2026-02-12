@@ -1,0 +1,13 @@
+[project]
+name = "trade-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alpaca-py>=0.43.2",
+    "dotenv>=0.9.9",
+    "pandas>=3.0.0",
+    "plotext>=5.3.2",
+    "pytz>=2025.2",
+]
