@@ -32,10 +32,10 @@ request_params2 = StockBarsRequest(
 bars1 = ta_client.get_stock_bars(request_params1)
 bars2 = ta_client.get_stock_bars(request_params2)
 
-df1 = bars1.df
-df2 = bars2.df
+#df1 = bars1.df
+#df2 = bars2.df
 #this is just for testing purposes
-print(df2)
+print(bars2.df, "\n", bars1.df)
 
 #latest_close = df['close'].iloc[-1]
 #print(f"The EOD Close Price for AAPL was: ${latest_close}")
