@@ -1,8 +1,9 @@
 from alpaca.data import StockHistoricalDataClient
-from lib.requests import api_key, secret_key, pull_quotes
+from lib.stock_requests import api_key, secret_key, pull_quotes
 from lib.plots import show_plots
+from lib.get_ticker import user_ticker
 
-symbol = input("Enter the stock ticker symbol: ").upper().strip()
+symbol = user_ticker()
 
 ta_client = StockHistoricalDataClient(api_key, secret_key)
 
