@@ -86,6 +86,13 @@ Simply run the script and follow the interactive prompts:
 python stock_charts.py
 ```
 
+Or if using uv
+
+```bash
+uv run stock_charts.py
+```
+
+
 The tool will guide you through the options (such as ticker symbol and timeframe) directly in the terminal.
 
 ---
