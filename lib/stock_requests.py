@@ -10,14 +10,14 @@ load_dotenv()
 api_key = os.getenv("ALPACA_API_KEY")
 secret_key = os.getenv("ALPACA_SECRET_KEY")
 
-def pull_quotes(ta_client,symbol):
+def pull_quotes(ta_client,symbol,user_timeframe):
     # add the ability to set the time frame to build the chart
 
     request_params = StockBarsRequest(
         symbol_or_symbols=symbol,
-        timeframe=TimeFrame.Day,
+        timeframe=user_timeframe,
         start=datetime(2025, 11, 11), # Start date
-        end=datetime(2026, 2, 12)    # End date
+        end=datetime.now()   # End date
     )
 
     return ta_client.get_stock_bars(request_params)

@@ -32,3 +32,28 @@ def show_plots (bars,symbol):
     # --- FINAL RENDER ---
     return plt.show()
 
+def show_multi_plots (bars1,bars2,symbol1,symbol2):
+    data1 = bars1.df.reset_index()
+    data2 = bars2.df.reset_index()
+
+    # 2. Define the grid: 1 row, 2 columns
+    plt.clf() # Clear current figure
+    plt.subplots(1, 2)
+
+    # --- LEFT CHART (Ticker 1) ---
+    plt.subplot(1, 1) # Select 1st row, 1st column
+    plt.date_form('d/m/Y')
+    plt.plot(data1['timestamp'].dt.strftime('%d/%m/%Y'), data1['close'], marker="dot", color="green")
+    plt.title(f"{symbol1} Price")
+    plt.grid(True)
+
+    # --- RIGHT CHART (Ticker 2) ---
+    plt.subplot(1, 2) # Select 1st row, 2nd column
+    plt.date_form('d/m/Y')
+    plt.plot(data2['timestamp'].dt.strftime('%d/%m/%Y'), data2['close'], marker="dot", color="blue")
+    plt.title(f"{symbol2} Price")
+    plt.grid(True)
+
+    # 3. Final Render
+    plt.show()
+
