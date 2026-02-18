@@ -10,11 +10,12 @@ class UserTimeFrame(Enum):
 
 def get_timeframe():
     while True:
-        choice = input("\nEnter Interval (Min, Hour, Day, Week) [Q to Quit]: ").strip().lower()
+        choice = input("\nEnter Interval (Hour, Day, Week) [Q to Quit]: ").strip().lower()
 
         match choice:
-            case "min" | "minute":
-                return UserTimeFrame.MINUTE.value
+            #not currently supporting this level of detail
+            #case "min" | "minute":
+            #    return UserTimeFrame.MINUTE.value
             
             case "hour":
                 return UserTimeFrame.HOUR.value

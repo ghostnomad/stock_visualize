@@ -1,8 +1,7 @@
 import os
 from dotenv import load_dotenv
-# from alpaca.trading.client import TradingClient
-from alpaca.data import StockHistoricalDataClient, StockTradesRequest, StockBarsRequest
-from alpaca.data.timeframe import TimeFrame
+from alpaca.data import StockBarsRequest # StockHistoricalDataClient, StockTradesRequest
+#from alpaca.data.timeframe import TimeFrame
 from datetime import datetime
 
 load_dotenv()
@@ -10,13 +9,13 @@ load_dotenv()
 api_key = os.getenv("ALPACA_API_KEY")
 secret_key = os.getenv("ALPACA_SECRET_KEY")
 
-def pull_quotes(ta_client,symbol,user_timeframe):
+def pull_quotes(ta_client,symbol,user_timeframe,history_timeframe):
     # add the ability to set the time frame to build the chart
 
     request_params = StockBarsRequest(
         symbol_or_symbols=symbol,
         timeframe=user_timeframe,
-        start=datetime(2025, 11, 11), # Start date
+        start=history_timeframe, # Start date
         end=datetime.now()   # End date
     )
 
