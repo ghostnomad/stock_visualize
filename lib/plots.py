@@ -1,4 +1,4 @@
-from datetime import datetime
+#from datetime import datetime
 import plotext as plt
 
 def show_plots (bars,symbol):
