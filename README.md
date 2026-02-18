@@ -152,6 +152,7 @@ This project is licensed under the [MIT License](LICENSE).
 - [pandas](https://github.com/pandas-dev/pandas) — for data manipulation and analysis
 - [pytz](https://pythonhosted.org/pytz/) — for timezone handling
 - [dotenv](https://github.com/theskumar/python-dotenv) — for environment variable management
+- [python-dateutil](https://github.com/dateutil/dateutil) — Used for robust relative date calculations (months, years) when determining chart history ranges.
 
 ---
 
