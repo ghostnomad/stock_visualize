@@ -46,6 +46,7 @@ dotenv>=0.9.9
 pandas>=3.0.0
 plotext>=5.3.2
 pytz>=2025.2
+python-dateutil>=2.9.0.post0
 ```
 
 ---
@@ -118,8 +119,8 @@ The following CLI argument support is planned for a future release:
 | Flag              | Description                              | Default  |
 |-------------------|------------------------------------------|----------|
 | `--ticker`        | Stock ticker symbol (e.g., AAPL, TSLA)  | —        |
-| `--timeframe`     | Chart timeframe (1d, 1w, 1m, 1y)        | `1m`     |
-| `--interval`      | Data interval (1m, 5m, 1h, 1d)          | `1d`     |
+| `--timeframe`     | Chart timeframe (1w, 1m, 1y)        | `1m`     |
+| `--interval`      | Data interval (1h, 1d, 1w)          | `1d`     |
 
 Passing arguments directly will allow the tool to be used in scripts and automated workflows without interactive prompts.
 
