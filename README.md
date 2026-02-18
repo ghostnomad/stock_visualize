@@ -101,7 +101,7 @@ The tool will guide you through the options (such as ticker symbol and timeframe
 
 **Start the tool:**
 ```bash
-python stock_charts.py
+uv run stock_charts.py
 ```
 
 ```
