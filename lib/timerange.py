@@ -1,3 +1,4 @@
+import sys
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
@@ -19,7 +20,7 @@ def get_chart_range():
             case "1y" | "year" | "y":
                 return now - relativedelta(years=1)
             case "q" | "quit":
-                exit()
+                sys.exit(0)
             case _:
                 print(f"⚠️  '{choice}' is not a valid range.")
 

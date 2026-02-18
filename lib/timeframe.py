@@ -1,3 +1,4 @@
+import sys
 from alpaca.data.timeframe import TimeFrame
 from enum import Enum
 
@@ -28,7 +29,7 @@ def get_timeframe():
             
             case "q" | "quit":
                 print("Exiting program...")
-                exit()
+                sys.exit(0)
             
             case _:
                 print(f"❌ '{choice}' is not recognized. Try again.")
